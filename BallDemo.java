@@ -4,8 +4,9 @@ import java.awt.Color;
  * Class BallDemo - a short demonstration showing animation with the 
  * Canvas class. 
  *
- * @author Michael Kölling and David J. Barnes
- * @version 2011.07.31
+ * @author Joshua McArdle
+ * @version 1.0.0
+ * @since 2015-10-19
  */
 
 public class BallDemo   
@@ -23,7 +24,7 @@ public class BallDemo
     /**
      * Simulate two bouncing balls
      */
-    public void bounce()
+    public void boxBounce()
     {
         int ground = 400;   // position of the ground line
 
