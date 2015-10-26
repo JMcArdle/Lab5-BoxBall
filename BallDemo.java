@@ -27,16 +27,24 @@ public class BallDemo
     public void boxBounce()
     {
         int ground = 400;   // position of the ground line
+        int ceiling = 100; //position of the ceiling 
+        int leftWall = 50; //position of the left wall
+        int rightWall = 550; //position of the right wall
 
         myCanvas.setVisible(true);
+        
 
         // draw the ground
         myCanvas.drawLine(50, ground, 550, ground);
+        myCanvas.drawLine(50, ceiling, 550, ceiling);
+        myCanvas.drawLine(leftWall, 100, leftWall, 400);
+        myCanvas.drawLine(rightWall, 100, rightWall, 400); 
 
-        // crate and show the balls
+        // create and show the balls
         BouncingBall ball = new BouncingBall(50, 50, 16, Color.BLUE, ground, myCanvas);
         ball.draw();
-        BouncingBall ball2 = new BouncingBall(70, 80, 20, Color.RED, ground, myCanvas);
+        BoxBall ball2 = new BoxBall(100, 100, 20, Color.RED, ground, ceiling, leftWall, rightWall, 
+                                    myCanvas);
         ball2.draw();
 
         // make them bounce
